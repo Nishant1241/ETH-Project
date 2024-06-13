@@ -1,3 +1,7 @@
+//run this code in remix.ide
+//first compile the code 
+//then deploy it and 
+//then perform the required inputs
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
