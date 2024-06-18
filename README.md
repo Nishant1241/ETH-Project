@@ -1,46 +1,27 @@
-//run this code in remix.ide
-//first compile the code 
-//then deploy it and 
-//then perform the required inputs
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.26;
+# Project Title
 
-/*
-       REQUIREMENTS
-    1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
-    2. Your contract will have a mapping of addresses to balances (address => uint)
-    3. You will have a mint function that takes two parameters: an address and a value. 
-       The function then increases the total supply by that number and increases the balance 
-       of the “sender” address by that amount
-    4. Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. 
-       It will take an address and value just like the mint functions. It will then deduct the value from the total supply 
-       and from the balance of the “sender”.
-    5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
-       to the amount that is supposed to be burned.
-*/
+Our own ethereum token
 
-contract MyToken {
+## Description
 
-    // public variables here
-    string public tokenName = "META";
-    string public tokenAbbrev = "Metacrafter";
-    uint public totalSupply = 0;
+The `MyToken` contract defines a basic token with the name "META" and abbreviation "Metacrafters". It utilizes a mapping to keep track of token balances for each address. The `mint` function increases the total token supply and adds tokens to a specified address. Conversely, the `burn` function reduces the total supply and removes tokens from an address if the balance is sufficient.
 
-    // mapping variable here
-    mapping(address => uint) public balances;
+## Getting Started
 
-    // mint function
-    function mint (address _address, uint _value) public {
-        totalSupply += _value;
-        balances[_address] += _value;
-    }
+### Installing
 
-    // burn function
-    function burn (address _address, uint _value) public {
-        if (balances[_address] >= _value) {
-            totalSupply -= _value;
-            balances[_address] -= _value;
-    }
-    }
+To run this program remix.ide should be used only because it requires some functionality that only remix can provide.
 
-}
+### Executing program
+
+Just turn on auto compile or can manually compile the code in the file titles at 'ETH Project' in the repository and then after compilation in the deploy section use any of the available addresses and then play with the number of tokens by minting and burning them and see if it works.
+
+## Authors
+
+Kumar Nishant
+kumarnishant1241@gmail.com
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
